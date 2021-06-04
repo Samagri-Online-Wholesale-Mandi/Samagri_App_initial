@@ -45,20 +45,46 @@ class Home_page extends StatelessWidget{
         ),
         centerTitle: true,
       ),
-      body: Container(
-        color: Colors.grey[800],
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
+      body: SingleChildScrollView(
+        child: Container(
+          color: Colors.grey[800],
           child: Column(    //column of body search bar and scroll bars for different commodities
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Center(
-                child: searchBar(),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Center(
+                  child: searchBar(),
+                ),
               ),
               SizedBox(height: 30,),
-              Card(//first commodity
-                color: Colors.grey[800],
-                child: populateContent(),
+              Column(
+                children: [
+                  Card(
+                    color: Colors.grey[800],
+                    child: populateContent(),
+                  ),
+                  SizedBox(height: 20,),
+                  Card(
+                    color: Colors.grey[800],
+                    child: populateContent(),
+                  ),
+                  SizedBox(height: 20,),
+                  Card(
+                    color: Colors.grey[800],
+                    child: populateContent(),
+                  ),
+                  SizedBox(height: 20,),
+                  Card(
+                    color: Colors.grey[800],
+                    child: populateContent(),
+                  ),
+                  SizedBox(height: 20,),
+                  Card(
+                    color: Colors.grey[800],
+                    child: populateContent(),
+                  ),
+                ],
               ),
             ],
           ),

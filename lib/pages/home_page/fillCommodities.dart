@@ -30,7 +30,7 @@ class _populateContentState extends State<populateContent> {
             margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
             child: SizedBox(
               width: double.infinity,
-              height: 200.0,
+              height: 180.0,
               child: Container(
                 color: Colors.grey[800],
                 child: ListView.builder(
@@ -60,7 +60,7 @@ class _populateContentState extends State<populateContent> {
                                 Text(
                                   "Onion",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Colors.yellowAccent,
                                     fontSize: 20,
                                   ),
                                 ),

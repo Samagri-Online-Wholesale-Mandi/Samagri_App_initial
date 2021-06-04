@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'fillCommodities.dart';
+
 void main() {
   runApp(MaterialApp(
     home: Home_page(),
@@ -46,43 +48,17 @@ class Home_page extends StatelessWidget{
       body: Container(
         color: Colors.grey[800],
         child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-          child: Column(
+          padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
+          child: Column(    //column of body search bar and scroll bars for different commodities
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Center(
                 child: searchBar(),
               ),
-              SizedBox(height: 20,),
-              Card(
-                margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      alignment: Alignment.topLeft,
-                      width: 130,
-                      color: Colors.green,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding:EdgeInsets.all(10,),
-                            child: Text(
-                              "Vegetables",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                          Row(
-                            //vegetable images scrollbar
-                          ),
-                        ]
-                      ),
-                    ),
-                  ],
-                ),
+              SizedBox(height: 30,),
+              Card(//first commodity
+                color: Colors.grey[800],
+                child: populateContent(),
               ),
             ],
           ),
@@ -122,5 +98,8 @@ class _searchBarState extends State<searchBar> {
     );
   }
 }
+
+
+
 
 

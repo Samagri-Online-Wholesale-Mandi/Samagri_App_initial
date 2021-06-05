@@ -64,6 +64,7 @@ class Home_page extends StatelessWidget{
                     color: Colors.grey[800],
                     child: populateContent(),
                   ),
+
                   SizedBox(height: 20,),
                   Card(
                     color: Colors.grey[800],

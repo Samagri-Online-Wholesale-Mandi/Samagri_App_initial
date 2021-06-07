@@ -45,13 +45,4 @@ List<Product> cereals = [
   Product(name: "Kiwi", id: 8, price: 150, image: "assets/fruit_images/kiwi.jpg",type:"Cereals"),
 ];
 
-List<Product> etc = [
-  Product(name: "Apple", id: 5, price: 100, image: "assets/fruit_images/apple.jpg",type:"etc"),
-  Product(name: "Mango", id: 6, price: 80, image: "assets/fruit_images/mango.jpg",type:"etc"),
-  Product(name: "Orange", id: 7, price: 60, image: "assets/fruit_images/orange.jpg",type:"etc"),
-  Product(name: "Kiwi", id: 8, price: 150, image: "assets/fruit_images/kiwi.jpg",type:"etc"),
-];
-
-
-
-List<List<Product>> productNames = [vegetables, fruits, pulses, cereals, etc];
+List<List<Product>> productNames = [vegetables, fruits, pulses, cereals];

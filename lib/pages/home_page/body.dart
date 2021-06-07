@@ -13,11 +13,10 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size*0.8;
     return SingleChildScrollView(
-        padding: EdgeInsets.all(5),
+      physics: ClampingScrollPhysics(),
         child: Column(    //column of body search bar and scroll bars for different commodities
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.symmetric(vertical: 20),

@@ -20,24 +20,28 @@ class itemCard extends StatelessWidget {
               radius: 50,
               backgroundColor: Colors.transparent,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-              child: Text(
-                product.name,
-                style: TextStyle(
-                  color: Colors.yellowAccent,
-                  fontSize: 18,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 10),
+                child: Text(
+                  product.name,
+                  style: TextStyle(
+                    color: Colors.yellowAccent,
+                    fontSize: 18,
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 15),
-              child: Text(
-                "₹${product.price}",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 22,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Text(
+                  "₹${product.price}",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 22,
+                  ),
                 ),
               ),
             )

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:home_page/Models/Product.dart';
 
 class populateContent extends StatefulWidget {
+
   @override
   _populateContentState createState() => _populateContentState();
 }
@@ -37,7 +39,7 @@ class _populateContentState extends State<populateContent> {
                   physics: ClampingScrollPhysics(),
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemCount: 15,
+                  itemCount: 10,
                   itemBuilder: (BuildContext context, int index) =>
                     SizedBox(
                       width: 120,

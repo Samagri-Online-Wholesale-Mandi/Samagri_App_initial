@@ -20,14 +20,10 @@ class Home_page extends StatelessWidget{
       body: Container(
         color: Colors.grey[900],
         child: Body(),
-      )
+      ),
     );
   }
-
-
 }
-
-
 class searchBar extends StatefulWidget {
 
   @override

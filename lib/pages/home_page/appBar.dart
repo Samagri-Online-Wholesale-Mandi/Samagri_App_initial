@@ -15,7 +15,7 @@ AppBar appbar() {
           ),
           SizedBox(width: 20,),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: Padding(
               padding: EdgeInsets.all(5),
               child: Text(
@@ -24,9 +24,19 @@ AppBar appbar() {
             ),
           ),
           Expanded(
+            flex: 1,
+            child: IconButton(
+              icon:Icon(Icons.call),
+              iconSize:30,
+              color: Colors.green,
+              onPressed: () {},
+            ),
+          ),
+          Expanded(
             child: IconButton(onPressed: () {},
               icon: Icon(Icons.shopping_cart),
               iconSize: 30,
+              color: Colors.yellow,
             ),
           ),
         ]

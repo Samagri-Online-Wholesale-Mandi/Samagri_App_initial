@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 itemCount: productNames.length,
                 itemBuilder: (context,index1) =>
-                    horizantalScrollViews(products:productNames[index1])
+                  horizantalScrollViews(products:productNames[index1])
               ),
             ),
           ],

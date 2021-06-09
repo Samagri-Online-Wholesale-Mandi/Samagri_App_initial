@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_page/Models/Product.dart';
+import 'package:home_page/pages/CategoryPage/CategoryBody.dart';
 
 import 'EachCommoditiesHorizantalView.dart';
 
@@ -14,19 +15,23 @@ class horizantalScrollViews extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.circular(12)
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "${products[0].type}",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.only(left:30.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.green[300],
+                borderRadius: BorderRadius.circular(5)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "${products[0].type}",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -45,6 +50,14 @@ class horizantalScrollViews extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: itemCard(
                           product: products[index],
+                          press: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CategoryBody(
+                                  product: products[index]
+                              )
+                            )
+                          ),
                         ),
                       ),
                 ),

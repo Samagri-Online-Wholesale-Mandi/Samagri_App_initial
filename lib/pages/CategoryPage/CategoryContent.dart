@@ -33,9 +33,9 @@ class CategoryContent extends StatelessWidget {
                           child: Text(
                             product.name,
                             style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 50,
-                                fontWeight: FontWeight.bold
+                              color: Colors.black,
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold
                             ),
                           ),
                         ),

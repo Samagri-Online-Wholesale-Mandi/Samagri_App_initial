@@ -39,12 +39,5 @@ List<Product> pulses = [
   Product(name: "Lobia", id: 11, price: 160, image: "assets/pulses_images/lobia.png",type:"pulses",color: Colors.white),
   Product(name: "masoor", id: 12, price: 50, image: "assets/pulses_images/masoor.png",type:"pulses",color: Colors.brown[200]!),
 ];
-//
-// List<Product> cereals = [
-//   Product(name: "Apple", id: 5, price: 100, image: "assets/fruit_images/apple.jpg",type:"Cereals"),
-//   Product(name: "Mango", id: 6, price: 80, image: "assets/fruit_images/mango.jpg",type:"Cereals"),
-//   Product(name: "Orange", id: 7, price: 60, image: "assets/fruit_images/orange.jpg",type:"Cereals"),
-//   Product(name: "Kiwi", id: 8, price: 150, image: "assets/fruit_images/kiwi.jpg",type:"Cereals"),
-// ];
 
 List<List<Product>> productNames = [vegetables, fruits, pulses];

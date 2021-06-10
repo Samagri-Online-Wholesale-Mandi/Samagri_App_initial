@@ -25,10 +25,13 @@ class _itemCardState extends State<itemCard> {
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
-              backgroundImage: AssetImage(product.image),
-              radius: 50,
-              backgroundColor: Colors.transparent,
+            Hero(
+              tag: "${product.id}",
+              child: CircleAvatar(
+                backgroundImage: AssetImage(product.image),
+                radius: 50,
+                backgroundColor: Colors.transparent,
+              ),
             ),
             Container(
               constraints: BoxConstraints(

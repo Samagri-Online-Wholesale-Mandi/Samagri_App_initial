@@ -2,45 +2,24 @@ import 'package:flutter/material.dart';
 
 AppBar appbar() {
   return AppBar(
+    toolbarHeight: 80,
     backgroundColor: Colors.black,
     elevation: 0,
-    title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Expanded(
-            child: CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 20,
-            ),
-          ),
-          SizedBox(width: 20,),
-          Expanded(
-            flex: 4,
-            child: Padding(
-              padding: EdgeInsets.all(5),
-              child: Text(
-                "Select commodity",
-              ),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: IconButton(
-              icon:Icon(Icons.call),
-              iconSize:30,
-              color: Colors.green,
-              onPressed: () {},
-            ),
-          ),
-          Expanded(
-            child: IconButton(onPressed: () {},
-              icon: Icon(Icons.shopping_cart),
-              iconSize: 30,
-              color: Colors.yellow,
-            ),
-          ),
-        ]
+    leading: Padding(
+      padding: const EdgeInsets.only(left:8.0),
+      child: CircleAvatar(
+        backgroundColor: Colors.white,
+      ),
     ),
-    centerTitle: true,
+    title: Text(
+      "Select Commodity",
+      style: TextStyle(
+        fontSize: 22
+      ),
+    ),
+    actions: [
+      IconButton(onPressed: (){}, icon: Icon(Icons.call),iconSize: 40,color: Colors.green,),
+      IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart),iconSize: 40, color: Colors.yellowAccent,),
+    ],
   );
 }

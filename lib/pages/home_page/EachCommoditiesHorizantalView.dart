@@ -34,15 +34,13 @@ class _itemCardState extends State<itemCard> {
               constraints: BoxConstraints(
                 maxWidth: 100,
               ),
-              child: Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 5,left: 18),
-                  child: Text(
-                    product.name,
-                    style: TextStyle(
-                      color: Colors.yellowAccent,
-                      fontSize: 20,
-                    ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 5,left: 18),
+                child: Text(
+                  product.name,
+                  style: TextStyle(
+                    color: Colors.yellowAccent,
+                    fontSize: 20,
                   ),
                 ),
               ),

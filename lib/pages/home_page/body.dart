@@ -4,7 +4,7 @@ import 'package:home_page/Models/Product.dart';
 
 import 'CommoditiesVerticalView.dart';
 
-import 'main.dart';
+import '../../main.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -36,6 +36,36 @@ class Body extends StatelessWidget {
             ),
           ],
         ),
+    );
+  }
+}
+
+class searchBar extends StatefulWidget {
+
+  @override
+  _searchBarState createState() => _searchBarState();
+}
+
+class _searchBarState extends State<searchBar> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50,
+      width: 300,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+          prefixIcon: Icon(Icons.search),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          hintText: 'Search',
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,13 @@
 # home_page
 
-A new Flutter application.
+A new Flutter page for supply chain app.
+
+## Video
+
+https://user-images.githubusercontent.com/65588835/121744408-7bb84d00-cb20-11eb-873c-6a8f4f42b23e.mp4
+
+
+
 
 ## Getting Started
 

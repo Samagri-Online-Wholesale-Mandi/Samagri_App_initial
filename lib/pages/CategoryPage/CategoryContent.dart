@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_page/Models/Product.dart';
-import 'package:home_page/pages/CategoryPage/add_to_cart.dart';
+import 'package:home_page/pages/CategoryPage/select_category.dart';
 
 class CategoryContent extends StatelessWidget {
   final Product product;
@@ -16,6 +16,7 @@ class CategoryContent extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Container(
+        height: size.height,
         color: product.color,
         child: Column(
           children: [
@@ -54,11 +55,10 @@ class CategoryContent extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: size.height * 0.3),
                     padding: EdgeInsets.only(
-                        top: size.height * 0.15,
                         left: 5,
                         right: 5
                     ),
-                    height: 800,
+                    height: size.height,
                     decoration: BoxDecoration(
                         color: Colors.grey[800],
                         borderRadius: BorderRadius.only(
@@ -66,11 +66,12 @@ class CategoryContent extends StatelessWidget {
                           topRight: Radius.circular(24),
                         )
                     ),
-                    child: AddToCart(),
+                    child: SelectCategory(product:product),
                   ),
                 ],
               ),
-            )
+            ),
+
           ],
         ),
       ),

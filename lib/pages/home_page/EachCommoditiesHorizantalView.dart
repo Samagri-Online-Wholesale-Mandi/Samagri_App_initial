@@ -30,7 +30,7 @@ class _itemCardState extends State<itemCard> {
               child: CircleAvatar(
                 backgroundImage: AssetImage(product.image),
                 radius: 50,
-                backgroundColor: Colors.transparent,
+                backgroundColor: product.color,
               ),
             ),
             Container(

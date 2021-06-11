@@ -141,11 +141,48 @@ List<Product> fruits = [
 ];
 
 //Pulses
-// List<Product> pulses = [
-//   Product(name: "Dry Beans", id: 9, price: 120, image: "assets/pulses_images/dry_beans.png",type:"Pulses",color: Colors.brown[200]!),
-//   Product(name: "Green Gram", id: 10, price: 180, image: "assets/pulses_images/green_gram.png",type:"Pulses",color:Colors.green[300]! ),
-//   Product(name: "Lobia", id: 11, price: 160, image: "assets/pulses_images/lobia.png",type:"pulses",color: Colors.white),
-//   Product(name: "masoor", id: 12, price: 50, image: "assets/pulses_images/masoor.png",type:"pulses",color: Colors.brown[200]!),
-// ];
+List<Product> pulses = [
+  Product(
+    name: "Dry Beans",
+    id: 9,
+    image: "assets/pulses_images/dry_beans.png",
+    type:"Pulses",
+    color: Colors.brown[200]!,
+    categories: [
+      Category(name: "Normal beans", price: 100, quantity: 10, scale: "Kg")
+    ]
+  ),
+  Product(
+    name: "Green Gram",
+    id: 10,
+    image: "assets/pulses_images/green_gram.png",
+    type:"Pulses",
+    color:Colors.green[300]!,
+    categories: [
+      Category(name: "Normal grams", price: 70, quantity: 10, scale: "Kg")
+    ]
+  ),
+  Product(
+    name: "Lobia",
+    id: 11,
+    image: "assets/pulses_images/lobia.png",
+    type:"pulses",
+    color: Colors.white,
+    categories: [
+      Category(name: "Normal Lobia", price: 80, quantity: 8, scale: "Kg")
+    ]
+  ),
+  Product(
+    name: "masoor",
+    id: 12,
+    image: "assets/pulses_images/masoor.png",
+    type:"pulses",
+    color: Colors.brown[200]!,
+    categories:[
+      Category(name: "Red massor", price: 100, quantity: 10, scale: "Kg"),
+      Category(name: "Brown massor", price: 80, quantity: 15, scale: "Kg"),
+    ]
+  )
+];
 
-List<List<Product>> productNames = [vegetables, fruits];
+List<List<Product>> productNames = [vegetables, fruits,pulses];

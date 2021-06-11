@@ -35,11 +35,14 @@ class _AddToCartState extends State<AddToCart> {
                       radius: 35,
                     ),
                     SizedBox(height: 10,),
-                    Text(
-                      category.name,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Text(
+                        category.name,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
                       ),
                     )
                   ]
@@ -75,7 +78,8 @@ class _AddToCartState extends State<AddToCart> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     SizedBox(
-                      width: 50,
+                      width: 30,
+                      height: 30,
                       child: ElevatedButton(
                         onPressed: (){
                           setState(() {
@@ -88,12 +92,16 @@ class _AddToCartState extends State<AddToCart> {
                             Icons.remove,
                             size: 15,
                           ),
-                        )
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(horizontal: 5),
+                        ),
                       ),
                     ),
                     SizedBox(width: 10,),
                     SizedBox(
-                      width: 50,
+                      width: 30,
+                      height: 30,
                       child: ElevatedButton(
                         onPressed: (){
                           setState(() {
@@ -104,7 +112,10 @@ class _AddToCartState extends State<AddToCart> {
                         child: Icon(
                           Icons.add,
                           size: 15,
-                       )
+                       ),
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(horizontal: 5),
+                        ),
                       ),
                     )
                   ],

@@ -5,12 +5,15 @@ AppBar appbar() {
     toolbarHeight: 80,
     backgroundColor: Colors.black,
     elevation: 0,
-    // leading: Padding(
-    //   padding: const EdgeInsets.only(left:8.0),
-    //   child: CircleAvatar(
-    //     backgroundColor: Colors.white,
-    //   ),
-    // ),
+    leading: Builder(
+      builder: (context) => IconButton(
+        icon: Icon(
+          Icons.menu_rounded,
+          size: 35,
+        ),
+        onPressed: () => Scaffold.of(context).openDrawer(),
+      ),
+    ),
     title: Text(
       "Select Commodity",
       style: TextStyle(

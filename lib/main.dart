@@ -5,7 +5,7 @@ import 'package:home_page/Models/Product.dart';
 
 import 'pages/home_page/appBar.dart';
 import 'pages/home_page/body.dart';
-// import 'side_bar.dart';
+ import 'sideDrawer.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -17,9 +17,8 @@ class Home_page extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: (),
       appBar: appbar(),
-
+      drawer: sideDrawer(),
       body: Container(
         color: Colors.grey[900],
         child: Body(),

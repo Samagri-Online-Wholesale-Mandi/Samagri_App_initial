@@ -5,6 +5,7 @@ import 'package:home_page/Models/Product.dart';
 
 import 'pages/home_page/appBar.dart';
 import 'pages/home_page/body.dart';
+import 'side_menu.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -17,6 +18,7 @@ class Home_page extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbar(),
+      drawer: sideMenu(),
       body: Container(
         color: Colors.grey[900],
         child: Body(),

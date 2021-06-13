@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:home_page/pages/SideDrawerPages/Profile_page/ViewProfile.dart';
+
+String profileImg = 'assets/vegetable_images/potato.png';
 
 class sideDrawer extends StatelessWidget {
   bool isVerified = true;
@@ -25,14 +28,17 @@ class sideDrawer extends StatelessWidget {
                   ]
               ),
               accountEmail: Text('Potato Seller'),
-              currentAccountPicture: CircleAvatar(
-                child: ClipOval(
-                  child: Image.asset(
-                    'assets/vegetable_images/potato.png',
-                    fit: BoxFit.cover,
-                    width: 90,
-                    height: 90,
+              currentAccountPicture: Hero(
+                tag: "$profileImg",
+                child: CircleAvatar(
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/vegetable_images/potato.png',
+                      fit: BoxFit.cover,
+                      width: 90,
+                      height: 90,
 
+                    ),
                   ),
                 ),
               ),
@@ -46,11 +52,21 @@ class sideDrawer extends StatelessWidget {
                 color: Colors.white70,
                 size: 30,
               ),
-              title: Text('Profile',
-                style: TextStyle(color: Colors.white,
-                    fontSize: 18),
+              title: Text(
+                'Profile',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18
+                ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => profile()
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: Icon(Icons.shopping_cart,

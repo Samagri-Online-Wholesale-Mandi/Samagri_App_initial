@@ -14,19 +14,16 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size*0.8;
-    return SingleChildScrollView(
-      physics: ClampingScrollPhysics(),
-        child: Column(    //column of body search bar and scroll bars for different commodities
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 20),
-              child: Center(
-                child: searchBar(),
-              ),
-            ),
-            SizedBox(
+    return Container(
+      margin: EdgeInsets.only(top: 10),
+      child: Stack(    //column of body search bar and scroll bars for different commodities
+        children: [
+          Padding(
+            padding: EdgeInsets.only(top: 70),
+            child: SizedBox(
               height: size.height,
               child: ListView.builder(
+                shrinkWrap: true,
                 physics: ClampingScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 itemCount: productNames.length,
@@ -34,12 +31,21 @@ class Body extends StatelessWidget {
                   horizantalScrollViews(products:productNames[index1])
               ),
             ),
-          ],
-        ),
+          ),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              width: size.width,
+              color: Colors.black,
+              height: 45,
+              child: searchBar(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
-
 class searchBar extends StatefulWidget {
 
   @override
@@ -50,22 +56,19 @@ class _searchBarState extends State<searchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: 300,
-      alignment: Alignment.center,
+      height: 40,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(10.0),
       ),
       child: TextField(
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.search),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-          ),
           hintText: 'Search',
         ),
       ),
     );
   }
 }
+
+

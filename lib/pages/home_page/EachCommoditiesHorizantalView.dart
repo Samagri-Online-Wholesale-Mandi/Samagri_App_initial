@@ -25,20 +25,21 @@ class _itemCardState extends State<itemCard> {
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Hero(
-              tag: "${product.id}",
-              child: CircleAvatar(
-                backgroundImage: AssetImage(product.image),
-                radius: 50,
-                backgroundColor: product.color,
+            Container(
+              width: 100,
+              child: Center(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(product.image),
+                  radius: 40,
+                  backgroundColor: product.color,
+                ),
               ),
             ),
             Container(
               constraints: BoxConstraints(
                 maxWidth: 100,
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 5,left: 18),
+              child: Center(
                 child: Text(
                   product.name,
                   style: TextStyle(

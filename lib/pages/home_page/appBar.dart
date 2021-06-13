@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 AppBar appbar() {
   return AppBar(
-    toolbarHeight: 80,
+    toolbarHeight: 70,
     backgroundColor: Colors.black,
     elevation: 0,
     leading: Builder(
@@ -17,12 +17,9 @@ AppBar appbar() {
     title: Text(
       "Select Commodity",
       style: TextStyle(
-        fontSize: 22
+        fontSize: 25,
       ),
-    ),
-    actions: [
-      IconButton(onPressed: (){}, icon: Icon(Icons.call),iconSize: 40,color: Colors.green,),
-      IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart),iconSize: 40, color: Colors.yellowAccent,),
-    ],
+    )
   );
 }
+

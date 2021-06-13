@@ -1,10 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // import 'package:home_page/Models/Product.dart';
 
+import 'BottomNavigation.dart';
 import 'pages/home_page/appBar.dart';
 import 'pages/home_page/body.dart';
  import 'sideDrawer.dart';
@@ -16,29 +15,36 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home_page(),
+      home: CommodityHomePage(),
     )
   );
 }
 
-class Home_page extends StatelessWidget{
+class CommodityHomePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value:  SystemUiOverlayStyle.light,
       child: Scaffold(
+        backgroundColor: Colors.grey[900],
         appBar: appbar(),
         drawer: sideDrawer(),
-        body: Container(
-          color: Colors.grey[900],
-          child: Body(),
-        ),
+        body: Body(),
+        bottomNavigationBar: new Theme(
+          data: Theme.of(context).copyWith(
+              canvasColor: Colors.grey[600],
+              primaryColor: Colors.red,
+              textTheme: Theme
+                  .of(context)
+                  .textTheme
+                  .copyWith(caption: new TextStyle(color: Colors.yellow))),
+          child: BottomNavigation(),
+        )
       ),
     );
   }
 }
-
 
 
 

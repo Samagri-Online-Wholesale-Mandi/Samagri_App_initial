@@ -43,8 +43,11 @@ class CategoryContent extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 100,vertical: 10),
-                        child: Image(
-                          image:AssetImage(product.image),
+                        child: Hero(
+                          tag: "${product.id}",
+                          child: Image(
+                            image:AssetImage(product.image),
+                          ),
                         ),
                       ),
                     ],

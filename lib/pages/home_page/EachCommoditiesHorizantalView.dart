@@ -27,11 +27,14 @@ class _itemCardState extends State<itemCard> {
           children: [
             Container(
               width: 100,
-              child: Center(
-                child: CircleAvatar(
-                  backgroundImage: AssetImage(product.image),
-                  radius: 40,
-                  backgroundColor: product.color,
+              child: Hero(
+                tag: "${product.id}",
+                child: Center(
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage(product.image),
+                    radius: 40,
+                    backgroundColor: product.color,
+                  ),
                 ),
               ),
             ),

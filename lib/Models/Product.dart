@@ -188,7 +188,7 @@ List<Product> pulses = [
 List<Product> pulses2 = [
   Product(
       name: "Dry Beans",
-      id: 9,
+      id: 13,
       image: "assets/pulses_images/dry_beans.png",
       type:"Pulses",
       color: Colors.brown[200]!,
@@ -198,7 +198,7 @@ List<Product> pulses2 = [
   ),
   Product(
       name: "Green Gram",
-      id: 10,
+      id: 14,
       image: "assets/pulses_images/green_gram.png",
       type:"Pulses",
       color:Colors.green[300]!,
@@ -208,7 +208,7 @@ List<Product> pulses2 = [
   ),
   Product(
       name: "Lobia",
-      id: 11,
+      id: 15,
       image: "assets/pulses_images/lobia.png",
       type:"pulses",
       color: Colors.white,
@@ -218,7 +218,7 @@ List<Product> pulses2 = [
   ),
   Product(
       name: "masoor",
-      id: 12,
+      id: 16,
       image: "assets/pulses_images/masoor.png",
       type:"pulses",
       color: Colors.brown[200]!,

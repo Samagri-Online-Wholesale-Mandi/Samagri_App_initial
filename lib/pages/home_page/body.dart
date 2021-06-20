@@ -4,7 +4,6 @@ import 'package:home_page/Models/Product.dart';
 
 import 'CommoditiesVerticalView.dart';
 
-import '../../main.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -16,7 +15,7 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size*0.8;
     return Container(
       margin: EdgeInsets.only(top: 10),
-      child: Stack(    //column of body search bar and scroll bars for different commodities
+      child: Stack(
         children: [
           Padding(
             padding: EdgeInsets.only(top: 70),

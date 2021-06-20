@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:home_page/Models/Product.dart';
+List<Product> starred = [];
+IconData beforeStar = Icons.star_border;
+IconData afterStar = Icons.star;
+
+
 class itemCard extends StatefulWidget {
   final Product product;
   final Function press;
@@ -16,6 +21,7 @@ class itemCard extends StatefulWidget {
 class _itemCardState extends State<itemCard> {
   final product;
   final press;
+  IconData currentIcon = beforeStar;
   _itemCardState(this.product, this.press);
 
   @override
@@ -26,17 +32,43 @@ class _itemCardState extends State<itemCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: 100,
-              child: Hero(
-                tag: "${product.id}",
-                child: Center(
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage(product.image),
-                    radius: 40,
-                    backgroundColor: product.color,
+              width: 130,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Hero(
+                    tag: "${product.id}",
+                    child: Center(
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage(product.image),
+                        radius: 40,
+                        backgroundColor: product.color,
+                      ),
+                    ),
                   ),
-                ),
-              ),
+                  IconButton(
+                    onPressed: (){
+                      setState(() {
+                        if(currentIcon == beforeStar) {
+                          currentIcon = afterStar;
+                          if(!starred.contains(product)){
+                            starred.add(product);
+                          }
+                        }
+                        else {
+                          currentIcon = beforeStar;
+                          starred.remove(product);
+                        }
+                      });
+                      print(starred);
+                    },
+                    icon: Icon(
+                      currentIcon,
+                      color: Colors.white,
+                    )
+                  ),
+                ],
+              )
             ),
             Container(
               constraints: BoxConstraints(

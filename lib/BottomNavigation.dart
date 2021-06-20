@@ -47,6 +47,13 @@ class _BottomNavigationState extends State<BottomNavigation> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
+              Icons.star,
+              size: 30,
+            ),
+            label: 'Saved items',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
               Icons.shopping_cart,
               size: 30,
             ),

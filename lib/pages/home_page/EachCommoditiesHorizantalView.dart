@@ -35,15 +35,14 @@ class _itemCardState extends State<itemCard> {
               width: 130,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Hero(
                     tag: "${product.id}",
-                    child: Center(
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage(product.image),
-                        radius: 40,
-                        backgroundColor: product.color,
-                      ),
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage(product.image),
+                      radius: 40,
+                      backgroundColor: product.color,
                     ),
                   ),
                   IconButton(
@@ -65,6 +64,7 @@ class _itemCardState extends State<itemCard> {
                     icon: Icon(
                       currentIcon,
                       color: Colors.white,
+                      size: 30,
                     )
                   ),
                 ],
@@ -72,9 +72,10 @@ class _itemCardState extends State<itemCard> {
             ),
             Container(
               constraints: BoxConstraints(
-                maxWidth: 100,
+                maxWidth: 130,
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8.0),
                 child: Text(
                   product.name,
                   style: TextStyle(

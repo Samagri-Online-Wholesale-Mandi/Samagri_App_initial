@@ -18,7 +18,7 @@ class horizantalScrollViews extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left:30.0),
+            padding: const EdgeInsets.only(left:20.0),
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.green[300],
@@ -38,7 +38,7 @@ class horizantalScrollViews extends StatelessWidget {
           ),
           SizedBox(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
               child: SizedBox(
                 height: 140,
                 child: ListView.builder(
@@ -47,7 +47,7 @@ class horizantalScrollViews extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) =>
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
                         child: itemCard(
                           product: products[index],
                           press: () => Navigator.push(

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../../BottomNavigation.dart';
 import 'EditProfile.dart';
 import 'package:home_page/sideDrawer.dart';
 
@@ -181,6 +182,7 @@ class _profileState extends State<profile> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigation(),
     );
   }
 }

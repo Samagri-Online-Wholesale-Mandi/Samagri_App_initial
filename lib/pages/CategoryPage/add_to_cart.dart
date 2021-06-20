@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:home_page/Models/Product.dart';
 
+int total = 0;
+
 class AddToCart extends StatefulWidget {
   final Category category;
   const AddToCart({
@@ -15,7 +17,7 @@ class AddToCart extends StatefulWidget {
 
 class _AddToCartState extends State<AddToCart> {
   final Category category;
-  int count = 0;
+  int total_product_count = 0;
 
   _AddToCartState(this.category);
 
@@ -57,7 +59,7 @@ class _AddToCartState extends State<AddToCart> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
                     Text(
-                      count.toString(),
+                      category.count.toString(),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,
@@ -83,8 +85,11 @@ class _AddToCartState extends State<AddToCart> {
                       child: ElevatedButton(
                         onPressed: (){
                           setState(() {
-                            if(count > 0)
-                              count--;
+                            if(category.count > 0) {
+                              category.count--;
+                              total_product_count--;
+                              total -= category.price;
+                            }
                           });
                         },
                         child: Center(
@@ -105,8 +110,11 @@ class _AddToCartState extends State<AddToCart> {
                       child: ElevatedButton(
                         onPressed: (){
                           setState(() {
-                            if(count < category.quantity)
-                              count++;
+                            if(category.count < category.quantity) {
+                              category.count++;
+                              total_product_count++;
+                              total += category.price;
+                            }
                           });
                         },
                         child: Icon(
@@ -138,7 +146,7 @@ class _AddToCartState extends State<AddToCart> {
             SizedBox(width: 20,),
             Expanded(
               child: Text(
-                (category.price * count).toString(),
+                (category.price * category.count).toString(),
                 style: TextStyle(
                   color: Colors.green,
                   fontSize: 25,

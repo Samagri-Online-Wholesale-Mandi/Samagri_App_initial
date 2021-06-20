@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../BottomNavigation.dart';
 import 'ViewProfile.dart';
 import 'package:home_page/sideDrawer.dart';
 
@@ -141,6 +142,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigation(),
     );
   }
 

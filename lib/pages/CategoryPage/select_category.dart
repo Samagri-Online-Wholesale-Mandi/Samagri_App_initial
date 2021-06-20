@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home_page/Models/Product.dart';
-
 import 'add_to_cart.dart';
 
-class SelectCategory extends StatelessWidget {
+class SelectCategory extends StatefulWidget {
   final Product product;
   const SelectCategory({
     Key? key,
@@ -11,23 +10,40 @@ class SelectCategory extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _SelectCategoryState createState() => _SelectCategoryState();
+}
+
+class _SelectCategoryState extends State<SelectCategory> {
+
+  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: [
-        Container(
-          width: size.width,
-          height: 60,
-          child: Center(
-            child: Text(
-              "Select Category",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 60,
+              child: Center(
+                child: Text(
+                  "Select Category",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
               ),
             ),
-          ),
+            Text(
+            "₹"+total.toString(),
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 35
+              ),
+            )
+          ]
         ),
         SizedBox(height: 20,),
         Padding(
@@ -100,9 +116,9 @@ class SelectCategory extends StatelessWidget {
             child: ListView.builder(
               physics: ClampingScrollPhysics(),
               scrollDirection: Axis.vertical,
-              itemCount: product.categories.length,
+              itemCount: widget.product.categories.length,
               itemBuilder: (context,index1) =>
-                AddToCart(category:product.categories[index1])
+                AddToCart(category:widget.product.categories[index1])
             ),
           ),
         ),

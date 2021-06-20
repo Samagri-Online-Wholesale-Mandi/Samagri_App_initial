@@ -5,12 +5,13 @@ class Category{
   final int price;
   final int quantity;
   final String scale;
+  int count = 0;
 
   Category({
     required this.name,
     required this.price,
     required this.quantity,
-    required this.scale
+    required this.scale,
   });
 }
 

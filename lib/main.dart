@@ -31,17 +31,8 @@ class CommodityHomePage extends StatelessWidget{
         appBar: appbar(),
         drawer: sideDrawer(),
         body: Body(),
-        bottomNavigationBar: new Theme(
-          data: Theme.of(context).copyWith(
-              canvasColor: Colors.grey[600],
-              primaryColor: Colors.red,
-              textTheme: Theme
-                  .of(context)
-                  .textTheme
-                  .copyWith(caption: new TextStyle(color: Colors.yellow))),
-          child: BottomNavigation(),
+        bottomNavigationBar: BottomNavigation(),
         )
-      ),
     );
   }
 }

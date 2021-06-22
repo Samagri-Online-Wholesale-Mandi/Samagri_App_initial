@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_page/pages/SideDrawerPages/FaqPage/FaqBody.dart';
 import 'package:home_page/pages/SideDrawerPages/Profile_page/ViewProfile.dart';
 
 String profileImg = 'assets/vegetable_images/potato.png';
@@ -100,6 +101,14 @@ class sideDrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.white,
                     fontSize: 18),
               ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FaqBody()
+                  ),
+                );
+              }
             ),
             ListTile(
               leading: Icon(Icons.mobile_screen_share_rounded,

@@ -12,6 +12,7 @@ class CategoryBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[800],
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.black,

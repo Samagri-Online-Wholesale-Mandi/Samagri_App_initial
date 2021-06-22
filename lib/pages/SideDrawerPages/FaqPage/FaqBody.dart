@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_page/pages/SideDrawerPages/FaqPage/FaqCategories.dart';
 
 import '../../../BottomNavigation.dart';
 
@@ -40,7 +41,10 @@ class FaqBody extends StatelessWidget {
           ),
         ),
       ),
-      // body: FaqContent(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: FaqCategories(),
+      ),
       bottomNavigationBar: BottomNavigation(),
     );
   }

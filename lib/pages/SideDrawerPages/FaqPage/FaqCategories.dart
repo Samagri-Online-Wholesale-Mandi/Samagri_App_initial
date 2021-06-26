@@ -25,6 +25,7 @@ class _FaqCategoriesState extends State<FaqCategories> {
             maxWidth: size.width,
             maxHeight: 50,
             minWidth: size.width,
+
           ),
 
           child:

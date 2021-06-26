@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home_page/Models/FaqQuestions.dart';
+import 'package:home_page/Models/QuestionsBuilder.dart';
 
 int selectedIndex=  0;
 class FaqCategories extends StatefulWidget {
@@ -13,32 +15,63 @@ class _FaqCategoriesState extends State<FaqCategories> {
   //by default first item will be selected
   int selectedIndex = 0;
   double size = 30;
+  int itemCount = 0;
+  late List<FaqQuestions> questionsList ;
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 40),
-        child: ConstrainedBox(
-          constraints: BoxConstraints(
-            maxWidth: size.width,
-            maxHeight: 50,
-            minWidth: size.width,
+    return Stack(
+      children: [
 
+        Padding(
+          padding: const EdgeInsets.only(top:100.0),
+          child: SingleChildScrollView(
+            child: Container(
+              child: SizedBox(
+                height: size.height*0.5,
+                width: size.width,
+                child: ListView.builder(
+                    itemCount: itemCount,
+                    shrinkWrap: true,
+                    physics: ClampingScrollPhysics(),
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (context, index) =>
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                          child: questionsBuilder(
+                            questions: questionsList[index],
+                            ),
+                          ),
+                        ),
+              ),
+            ),
           ),
-
-          child:
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              buildContainer(1,"About us"),
-              buildContainer(2, "Orders"),
-              buildContainer(3, "Payment")
-            ],
-          )
         ),
-      ),
+
+        Align(
+          alignment: Alignment.topCenter,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 40),
+            child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxWidth: size.width,
+                  maxHeight: 50,
+                  minWidth: size.width,
+                ),
+                child:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    buildContainer(1,"About us"),
+                    buildContainer(2, "Orders"),
+                    buildContainer(3, "Payment")
+                  ],
+                )
+            ),
+          ),
+        ),
+
+      ]
     );
   }
 
@@ -47,7 +80,20 @@ class _FaqCategoriesState extends State<FaqCategories> {
       onTap: (){
         setState(() {
           selectedIndex = index;
+          // print("index = $index");
           size = 30;
+          // print(text);
+          if(text == "About us"){
+            itemCount = aboutUsQuestions.length;
+            questionsList = aboutUsQuestions;
+          }else if(text == "Orders"){
+            itemCount = ordersQuestion.length;
+            questionsList = ordersQuestion;
+          }else if(text == "Payment"){
+            itemCount = paymentQuestions.length;
+            questionsList = paymentQuestions;
+          }
+          // print(itemCount);
         });
       },
       child: Container(

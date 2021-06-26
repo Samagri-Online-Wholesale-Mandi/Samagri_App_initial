@@ -14,54 +14,58 @@ class FaqQuestions extends Category{
   FaqQuestions({required this.question, required this.answer, required this.category}) : super(categoryName: category);
 }
 
-List<FaqQuestions> questions = [
+List<FaqQuestions> aboutUsQuestions = [
   //about us questions
   FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
+      question:"From about us question 1",
+      answer:"From about us answer 1",
       category:"About US"
   ),
   FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
+      question:"From about us questions 2",
+      answer:"From about us answers 2",
       category:"About US"
   ),
   FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
+      question:"From about us questions 3",
+      answer:"From about us answers 3",
       category:"About US"
   ),
-  //Orders questions
-  FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
-      category:"Orders"
-  ),
-  FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
-      category:"Orders"
-  ),
-  FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
-      category:"Orders"
-  ),
-  //payment questions
-  FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
-      category:"Payment"
-  ),
-  FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
-      category:"Payment"
-  ),
-  FaqQuestions(
-      question:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet, mi eget placerat tempor, diam erat varius arcu, non vestibulum diam enim vitae diam",
-      answer:" Nullam dolor orci, tincidunt vel elit accumsan, lacinia imperdiet erat. Aliquam eget molestie tortor",
-      category:"Payment"
-  ),
+];
 
+List<FaqQuestions> ordersQuestion = [
+  FaqQuestions(
+      question:"From Orders question 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint",
+      answer:"From Orders answer 1",
+      category:"Orders"
+  ),
+  FaqQuestions(
+      question:"From Orders question 2",
+      answer:"From Orders answer 2",
+      category:"Orders"
+  ),
+  FaqQuestions(
+      question:"From Orders question 3",
+      answer:"From Orders answer 3",
+      category:"Orders"
+  ),
+];
+
+
+List<FaqQuestions> paymentQuestions = [
+  FaqQuestions(
+      question:"From Payment question 1",
+      answer:" From Payment answer 1",
+      category:"Payment"
+  ),
+  FaqQuestions(
+      question:"From Payment question 2",
+      answer:"From Payment answer 2",
+      category:"Payment"
+  ),
+  FaqQuestions(
+      question:"From Payment question  3",
+      answer:"From Payment answer 3",
+      category:"Payment"
+  ),
 ];

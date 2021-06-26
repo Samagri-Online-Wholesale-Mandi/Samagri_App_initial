@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_page/Models/FaqQuestions.dart';
-import 'package:home_page/Models/QuestionsBuilder.dart';
+import 'package:home_page/pages/SideDrawerPages/FaqPage/QuestionsBuilder.dart';
 
 int selectedIndex=  0;
 class FaqCategories extends StatefulWidget {

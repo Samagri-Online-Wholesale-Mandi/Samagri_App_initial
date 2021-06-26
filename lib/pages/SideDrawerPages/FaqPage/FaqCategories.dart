@@ -115,26 +115,5 @@ class _FaqCategoriesState extends State<FaqCategories> {
       ),
     );
   }
-
-  // Widget buildCategory(int index){
-  //   return GestureDetector(
-  //     onTap: (){
-  //       setState(() {
-  //         selectedIndex = index;
-  //       });
-  //     },
-  //     child: Container(
-  //       padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-  //       color: selectedIndex==index ? Colors.yellowAccent : Colors.transparent,
-  //       child: Text(
-  //         categories[index],
-  //         style: TextStyle(
-  //           fontWeight: FontWeight.bold,
-  //           color: selectedIndex == index ?  Colors.black : Colors.white,
-  //           fontSize: 20
-  //         ),
-  //       ),
-  //     ),
-  //   );
   }
 

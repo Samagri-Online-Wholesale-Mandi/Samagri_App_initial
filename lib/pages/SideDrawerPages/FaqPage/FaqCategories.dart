@@ -15,7 +15,7 @@ class _FaqCategoriesState extends State<FaqCategories> {
   //by default first item will be selected
   int selectedIndex = 1;
   double size = 30;
-  int itemCount = 0;
+  int itemCount = aboutUsQuestions.length;
   List<FaqQuestions> questionsList  = aboutUsQuestions;
 
   Widget build(BuildContext context) {

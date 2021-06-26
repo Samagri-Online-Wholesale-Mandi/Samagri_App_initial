@@ -31,6 +31,16 @@ List<FaqQuestions> aboutUsQuestions = [
       answer:"From about us answers 3",
       category:"About US"
   ),
+  FaqQuestions(
+      question:"From about us questions 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae ",
+      answer:"From about us answers 4",
+      category:"About US"
+  ),
+  FaqQuestions(
+      question:"From about us questions 5",
+      answer:"From about us answers 5",
+      category:"About US"
+  ),
 ];
 
 List<FaqQuestions> ordersQuestion = [
@@ -47,6 +57,16 @@ List<FaqQuestions> ordersQuestion = [
   FaqQuestions(
       question:"From Orders question 3",
       answer:"From Orders answer 3",
+      category:"Orders"
+  ),
+  FaqQuestions(
+      question:"From Orders question 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
+      answer:"From Orders answer 4",
+      category:"Orders"
+  ),
+  FaqQuestions(
+      question:"From Orders question 5",
+      answer:"From Orders answer 5",
       category:"Orders"
   ),
 ];

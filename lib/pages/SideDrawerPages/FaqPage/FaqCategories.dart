@@ -13,10 +13,10 @@ class FaqCategories extends StatefulWidget {
 class _FaqCategoriesState extends State<FaqCategories> {
   List<String> categories = ["About Us", "Orders", "Payment"];
   //by default first item will be selected
-  int selectedIndex = 0;
+  int selectedIndex = 1;
   double size = 30;
   int itemCount = 0;
-  late List<FaqQuestions> questionsList ;
+  List<FaqQuestions> questionsList  = aboutUsQuestions;
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -97,7 +97,10 @@ class _FaqCategoriesState extends State<FaqCategories> {
         });
       },
       child: Container(
-        color: selectedIndex==index ? Colors.yellowAccent : Colors.transparent,
+        decoration: BoxDecoration(
+            color: selectedIndex==index ? Colors.blueGrey[100] : Colors.transparent,
+            borderRadius: BorderRadius.circular(6)
+        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(

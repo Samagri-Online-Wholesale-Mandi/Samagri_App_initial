@@ -20,8 +20,8 @@ class questionsBuilder extends StatelessWidget {
             color: Colors.white
           ),
           children: <TextSpan>[
-            TextSpan(text: questions.question, style: TextStyle(color: Colors.orange, fontSize: 25)),
-            TextSpan(text: "\n\n\t\t\t${questions.answer}\n\n", style: TextStyle(color: Colors.green, fontSize: 22)),
+            TextSpan(text: questions.question, style: TextStyle(color: Colors.orange[200], fontSize: 20)),
+            TextSpan(text: "\n\n\t\t\t\t${questions.answer}\n\n", style: TextStyle(color: Colors.green, fontSize: 18)),
           ],
         ),
       ),

@@ -32,9 +32,9 @@ class FaqBody extends StatelessWidget {
         title: RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
-            text:"Frequently asked Questions",
+            text:"Frequently Asked Questions",
             style: TextStyle(
-              fontSize: 40,
+              fontSize: 38,
               fontWeight: FontWeight.bold,
               height: 1.5
             )

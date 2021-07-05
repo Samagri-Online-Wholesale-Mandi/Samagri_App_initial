@@ -28,7 +28,7 @@ class _FaqCategoriesState extends State<FaqCategories> {
           child: SingleChildScrollView(
             child: Container(
               child: SizedBox(
-                height: size.height*0.5,
+                height: size.height*0.6,
                 width: size.width,
                 child: ListView.builder(
                     itemCount: itemCount,

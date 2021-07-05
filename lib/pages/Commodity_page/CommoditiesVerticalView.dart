@@ -21,7 +21,7 @@ class horizantalScrollViews extends StatelessWidget {
             padding: const EdgeInsets.only(left:20.0),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.green[300],
+                color: Colors.green[500],
                 borderRadius: BorderRadius.circular(5)
               ),
               child: Padding(
@@ -31,6 +31,7 @@ class horizantalScrollViews extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white
                   ),
                 ),
               ),

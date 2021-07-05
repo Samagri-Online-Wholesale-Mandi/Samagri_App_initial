@@ -45,7 +45,6 @@ class FaqBody extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: FaqCategories(),
       ),
-      bottomNavigationBar: BottomNavigation(),
     );
   }
 }

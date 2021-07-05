@@ -41,6 +41,11 @@ List<FaqQuestions> aboutUsQuestions = [
       answer:"From about us answers 5",
       category:"About US"
   ),
+  FaqQuestions(
+      question:"From about us questions 5",
+      answer:"From about us answers 5",
+      category:"About US"
+  ),
 ];
 
 List<FaqQuestions> ordersQuestion = [

@@ -33,12 +33,6 @@ class CategoryBody extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: (){},
-            icon: Icon(Icons.call),
-            color: Colors.green,
-            iconSize: 40,
-          ),
-          IconButton(
-            onPressed: (){},
             icon: Icon(Icons.shopping_cart),
             iconSize: 40,
             color: Colors.yellowAccent,

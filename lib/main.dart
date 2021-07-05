@@ -4,8 +4,8 @@ import 'package:flutter/services.dart';
 // import 'package:home_page/Models/Product.dart';
 
 import 'BottomNavigation.dart';
-import 'pages/home_page/appBar.dart';
-import 'pages/home_page/body.dart';
+import 'pages/Commodity_page/appBar.dart';
+import 'pages/Commodity_page/body.dart';
  import 'sideDrawer.dart';
 
 void main() {

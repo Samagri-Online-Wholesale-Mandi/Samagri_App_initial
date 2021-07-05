@@ -58,28 +58,33 @@ class _itemCardState extends State<itemCard> {
                 children: [
                   Row(
                     children: [
-                      SizedBox(width: 80,),
-                      IconButton(
-                        onPressed: (){
-                          setState(() {
-                            if(currentIcon == beforeStar) {
-                              currentIcon = afterStar;
-                              if(!starred.contains(product)){
-                                starred.add(product);
+                      SizedBox(width: 100),
+                      FittedBox(
+                        fit: BoxFit.contain,
+                        child: IconButton(
+                          padding: EdgeInsets.zero,
+                          constraints: BoxConstraints(),
+                          onPressed: (){
+                            setState(() {
+                              if(currentIcon == beforeStar) {
+                                currentIcon = afterStar;
+                                if(!starred.contains(product)){
+                                  starred.add(product);
+                                }
                               }
-                            }
-                            else {
-                              currentIcon = beforeStar;
-                              starred.remove(product);
-                            }
-                          });
-                          print(starred);
-                        },
-                        icon: Icon(
-                          currentIcon,
-                          color: Colors.grey[300],
-                          size: 25,
-                        )
+                              else {
+                                currentIcon = beforeStar;
+                                starred.remove(product);
+                              }
+                            });
+                            print(starred);
+                          },
+                          icon: Icon(
+                            currentIcon,
+                            color: Colors.grey[300],
+                            size: 30,
+                          )
+                        ),
                       ),
                     ],
                   ),

@@ -42,7 +42,7 @@ class horizantalScrollViews extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
               child: SizedBox(
-                height: 160,
+                height: 140,
                 child: ListView.builder(
                   itemCount: products.length,
                   physics: ClampingScrollPhysics(),

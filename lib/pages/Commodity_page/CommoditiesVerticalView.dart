@@ -4,6 +4,7 @@ import 'package:home_page/pages/CategoryPage/CategoryBody.dart';
 
 import 'EachCommoditiesHorizantalView.dart';
 
+
 class horizantalScrollViews extends StatelessWidget {
   final List<Product> products;
   const horizantalScrollViews( {
@@ -41,24 +42,16 @@ class horizantalScrollViews extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
               child: SizedBox(
-                height: 140,
+                height: 160,
                 child: ListView.builder(
                   itemCount: products.length,
                   physics: ClampingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) =>
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: itemCard(
                           product: products[index],
-                          press: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => CategoryBody(
-                                  product: products[index]
-                              )
-                            )
-                          ),
                         ),
                       ),
                 ),

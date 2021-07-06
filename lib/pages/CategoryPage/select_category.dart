@@ -14,115 +14,124 @@ class SelectCategory extends StatefulWidget {
 }
 
 class _SelectCategoryState extends State<SelectCategory> {
-
+  int total = 0;
+  void f1 (){
+    setState(() {
+      total = AddToCart.total;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              height: 60,
-              child: Center(
-                child: Text(
-                  "Select Category",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
-              ),
-            ),
-            Text(
-            "₹"+total.toString(),
-              style: TextStyle(
-                color: Colors.green,
-                fontSize: 35
-              ),
-            )
-          ]
-        ),
-        SizedBox(height: 20,),
-        Padding(
-          padding: const EdgeInsets.only(left: 8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+
+    return GestureDetector(
+      onTap: f1,
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Expanded(
-                flex: 1,
+              Container(
+                height: 60,
                 child: Center(
                   child: Text(
-                    "Category",
+                    "Select Category",
                     style: TextStyle(
-                      color: Colors.yellow,
-                      fontSize: 16,
+                      color: Colors.white,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold
                     ),
                   ),
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Text(
-                    "Quantity",
-                    style: TextStyle(
-                      color: Colors.yellow,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
+              Text(
+              "₹"+total.toString(),
+                style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 35
                 ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Text(
-                    "Price(/Kg)",
-                    style: TextStyle(
-                      color: Colors.yellow,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Center(
-                  child: Text(
-                    "Total",
-                    style: TextStyle(
-                      color: Colors.yellow,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-              ),
-            ],
+              )
+            ]
           ),
-        ),
-        SizedBox(height: 20,),
-        Padding(
-          padding: const EdgeInsets.only(left: 10.0),
-          child: SizedBox(
-            height: size.height*0.5,
-            child: ListView.builder(
-              physics: ClampingScrollPhysics(),
-              scrollDirection: Axis.vertical,
-              itemCount: widget.product.categories.length,
-              itemBuilder: (context,index1) =>
-                AddToCart(category:widget.product.categories[index1])
+          SizedBox(height: 20,),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Center(
+                    child: Text(
+                      "Category",
+                      style: TextStyle(
+                        color: Colors.yellow,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text(
+                      "Quantity",
+                      style: TextStyle(
+                        color: Colors.yellow,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text(
+                      "Price(/Kg)",
+                      style: TextStyle(
+                        color: Colors.yellow,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Center(
+                    child: Text(
+                      "Total",
+                      style: TextStyle(
+                        color: Colors.yellow,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-        ),
-      ],
+          SizedBox(height: 20,),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: SizedBox(
+              height: size.height*0.5,
+              child: ListView.builder(
+                physics: ClampingScrollPhysics(),
+                scrollDirection: Axis.vertical,
+                itemCount: widget.product.categories.length,
+                itemBuilder: (context,index1) =>
+                  AddToCart(category:widget.product.categories[index1])
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

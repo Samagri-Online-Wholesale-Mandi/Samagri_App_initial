@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:home_page/Models/Product.dart';
-
 import 'CommoditiesVerticalView.dart';
 
 

@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'BottomNavigation.dart';
 import 'pages/Commodity_page/appBar.dart';
 import 'pages/Commodity_page/body.dart';
- import 'sideDrawer.dart';
+import 'sideDrawer.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(

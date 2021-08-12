@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1049499159641",
+    "project_id": "samagri-app-6ae60",
+    "storage_bucket": "samagri-app-6ae60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049499159641:android:e5c718b356d64c84177548",
+        "android_client_info": {
+          "package_name": "com.example.home_page"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049499159641-18a8t9tpl6ka3rs7eijr0393agcd0h4d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.home_page",
+            "certificate_hash": "7546b328196848d38004ed7a07464d65c7bf2aa0"
+          }
+        },
+        {
+          "client_id": "1049499159641-0jiql4ib5qr3qi9falohbn4737vbej0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3f3KrZtpZAR8fi3CB_87QH3P4u0_M20Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049499159641-0jiql4ib5qr3qi9falohbn4737vbej0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
